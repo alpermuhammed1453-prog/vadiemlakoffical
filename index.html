@@ -15,16 +15,51 @@
             padding: 0;
             background-color: #f5f5f5;
         }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
+
+        /* Video Arkaplanı Stilleri */
+        .video-background {
+            position: relative;
+            width: 100%;
+            height: 60vh; /* Ekran yüksekliğinin %60'ı */
+            overflow: hidden;
+            background-color: #2c3e50; /* Video yüklenmezse veya mobilse alternatif arka plan */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        header h1 {
-            font-size: 3em;
+
+        #myVideo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; /* İçeriğin arkasında kalması için */
+            background-size: cover;
+            filter: brightness(60%); /* Videoyu biraz karartır */
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1; /* İçeriğin videonun önünde olması için */
+            text-align: center;
+            color: white;
+        }
+
+        /* Eski header stillerini geçersiz kıl ve video üzerine ayarla */
+        header { /* Bu kural artık yukarıdaki .video-background tarafından ezilecek */
+            padding: 0;
+            background-color: transparent;
+        }
+        header h1 { /* Video üzerinde daha iyi görünmesi için */
+            font-size: 4em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             margin: 0;
         }
+
+
         nav {
             display: flex;
             justify-content: center;
@@ -56,7 +91,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        /* GÖRSEL STİLİ */
+        /* GÖRSEL STİLİ (Gerçek görseller için) */
         .property img { 
             width: 100%; 
             height: auto;
@@ -84,14 +119,20 @@
         .instagram a:hover {
             background-color: #d32f4c;
         }
-        /* Admin butonu ve stili tamamen kaldırıldı */
     </style>
 </head>
 <body>
-    <header>
-        <h1>VadiEmlakOffical</h1>
-        <div class="instagram">
-            <a href="https://www.instagram.com/vadiemlakoffical/?hl=tr" target="_blank">Instagram Hesabımız</a>
+    
+    <header class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="images/14508384_2160_3840_60fps.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+        </video>
+        <div class="header-content">
+            <h1>VadiEmlakOffical</h1>
+            <div class="instagram">
+                <a href="https://www.instagram.com/vadiemlakoffical/?hl=tr" target="_blank">Instagram Hesabımız</a>
+            </div>
         </div>
     </header>
     <nav>
@@ -108,7 +149,7 @@
         <h2>Satılık/Kiralık Emlaklar</h2>
         <div class="properties">
             <div class="property">
-                <img src="https://via.placeholder.com/300x200?text=3%2B1+Apartment" alt="3+1 Daire Görseli">
+                <img src="https://via.placeholder.com/300x200?text=3%2B1+Apartment" alt="3+1 Daire Görseli"> 
                 
                 <h3>3+1 Daire</h3>
                 <p>Fiyat: 2.500.000₺</p>
