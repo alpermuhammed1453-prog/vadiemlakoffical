@@ -49,11 +49,11 @@
         }
 
         /* Eski header stillerini geçersiz kıl ve video üzerine ayarla */
-        header { /* Bu kural artık yukarıdaki .video-background tarafından ezilecek */
+        header { 
             padding: 0;
             background-color: transparent;
         }
-        header h1 { /* Video üzerinde daha iyi görünmesi için */
+        header h1 { 
             font-size: 4em;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             margin: 0;
@@ -91,7 +91,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        /* GÖRSEL STİLİ (Gerçek görseller için) */
+        /* GÖRSEL STİLİ (Yer tutucular için) */
         .property img { 
             width: 100%; 
             height: auto;
@@ -110,72 +110,3 @@
         }
         .instagram a {
             color: #fff;
-            font-weight: bold;
-            text-decoration: none;
-            background-color: #e4405f;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-        .instagram a:hover {
-            background-color: #d32f4c;
-        }
-    </style>
-</head>
-<body>
-    
-    <header class="video-background">
-        <video autoplay muted loop id="myVideo">
-            <source src="images/14508384_2160_3840_60fps.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-        </video>
-        <div class="header-content">
-            <h1>VadiEmlakOffical</h1>
-            <div class="instagram">
-                <a href="https://www.instagram.com/vadiemlakoffical/?hl=tr" target="_blank">Instagram Hesabımız</a>
-            </div>
-        </div>
-    </header>
-    <nav>
-        <a href="#home">Ana Sayfa</a>
-        <a href="#about">Hakkımızda</a>
-        <a href="#properties">Emlaklar</a>
-        <a href="#contact">İletişim</a>
-    </nav>
-    <section class="content" id="about">
-        <h2>Hakkımızda</h2>
-        <p>Vadi Emlak olarak, müşterilerimize en iyi hizmeti sunuyor ve hayallerindeki evi bulmalarına yardımcı oluyoruz. Satılık ve kiralık konutlar için doğru adres.</p>
-    </section>
-    <section class="content" id="properties">
-        <h2>Satılık/Kiralık Emlaklar</h2>
-        <div class="properties">
-            <div class="property">
-                <img src="https://via.placeholder.com/300x200?text=3%2B1+Apartment" alt="3+1 Daire Görseli"> 
-                
-                <h3>3+1 Daire</h3>
-                <p>Fiyat: 2.500.000₺</p>
-            </div>
-            <div class="property">
-                <img src="https://via.placeholder.com/300x200?text=2%2B1+Apartment" alt="2+1 Daire Görseli">
-                <h3>2+1 Daire</h3>
-                <p>Fiyat: 1.800.000₺</p>
-            </div>
-            <div class="property">
-                <img src="https://via.placeholder.com/300x200?text=Villa" alt="Villa Görseli">
-                <h3>Villa</h3>
-                <p>Fiyat: 5.200.000₺</p>
-            </div>
-        </div>
-    </section>
-    <section class="content" id="contact">
-        <h2>İletişim</h2>
-        <p>Email: info@vadiemlak.com</p>
-        <p>Telefon: 0 (555) 578 48 19</p>
-        <p>Adres: İstanbul, Türkiye</p>
-    </section>
-    <footer>
-        &copy; 2025 Vadi Emlak. Tüm hakları saklıdır.
-        <br>
-        <span style="font-size: 0.8em; color: #ccc;">Alper'in Katkılarıyla</span>
-    </footer>
-</body>
-</html>
